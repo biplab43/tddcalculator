@@ -1,11 +1,11 @@
 <?php
-class Calculator{
-    private $a = 5;
-    private $b = 3;
+
+class Calculator
+{
     function add($a, $b){
-        return "The addition value is: ".$a+$b;
+        return $a+$b;
     }
     function substract ($a, $b){
-        return "The substraction value is: ".$a-$b;
+        return $a-$b;
     }
 }
