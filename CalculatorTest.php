@@ -21,8 +21,7 @@ class CalculatorTest extends TestCase
         $this->assertEquals(2, $this->calculator->add(-3,5));
         $this->assertEquals(-8, $this->calculator->add(-3,-5));
         $this->assertEquals(0, $this->calculator->add(0,0));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->add("5",3));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->add("5","a"));
+        $this->assertEquals("Please enter number in both values", $this->calculator->add(5,"a"));
     }
 
     function testSubstract(){
@@ -34,8 +33,7 @@ class CalculatorTest extends TestCase
         $this->assertEquals(5, $this->calculator->substract(-5,-10));
         $this->assertEquals(0, $this->calculator->substract(10,10));
         $this->assertEquals(0, $this->calculator->substract(0,0));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->substract("5",3));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->substract("5","a"));
+        $this->assertEquals("Please enter number in both values", $this->calculator->substract(5,"a"));
     }
 
     function testMultiply(){
@@ -47,8 +45,7 @@ class CalculatorTest extends TestCase
         $this->assertEquals(0, $this->calculator->multiply(0,-5));
         $this->assertEquals(-15, $this->calculator->multiply(3,-5));
         $this->assertEquals(15, $this->calculator->multiply(-3,-5));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->multiply("5",3));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->multiply("5","a"));
+        $this->assertEquals("Please enter number in both values", $this->calculator->multiply(5,"a"));
     }
 
     function testDivide(){
@@ -61,7 +58,6 @@ class CalculatorTest extends TestCase
         $this->assertEquals(33.33, $this->calculator->divide(100,3));
         $this->assertEquals(16.67, $this->calculator->divide(100,6));
         $this->assertEquals(0.2, $this->calculator->divide(2,10));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->divide("5",3));
-        $this->assertEquals("Please enter integer in both values", $this->calculator->divide("5","a"));
+        $this->assertEquals("Please enter number in both values", $this->calculator->divide(5,"a"));
     }
 }
